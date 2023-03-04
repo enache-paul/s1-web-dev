@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Howest Trajectbuilder test</title>
+    <link rel="stylesheet" href="assets/css/reset.css"/>
+    <link rel="stylesheet" href="assets/css/screen.css"/>
+    <script src="assets/js/data/global-variables.js"></script>
+    <script src="assets/js/helper.js"></script>
+    <script src="assets/js/overviews.js"></script>
+    <script src="assets/js/quickview.js"></script>
+    <script src="assets/js/summary.js"></script>
+    <script src="assets/js/filter-and-sort.js"></script>
+    <script src="assets/js/personal-data.js"></script>
+    <script src="assets/js/data/modules.js"></script>
+    <script src="assets/js/data/overview-stages.js"></script>
+    <script src="assets/js/script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>howest curriculum builder</h1>
+            <p>Create your individual curriculum</p>
+        </div>
+        <img src="assets/images/howest2.jpg" alt="HOWEST">
+    </header>
+    <div class="curriculum-quickview-wrapper" id="top">
+        <main>
+            <div class="overview-curriculum">
+                <h2 id="curriculum">Curriculum builder: the tool for tailored curricula</h2>
+                <p>Studying for a Bachelor's degree can be tough. Not everyone commences studies with the same background, whilst others combine it with a (full-time) job. In order to service all students from all backgrounds, we enable them to create a <strong>tailor-made curriculum</strong> that suits their needs.</p>
+
+                <p>Curricula have to fit like a glove. Study too light, <strong>boredom and disinterest</strong> will set in. Take on a too loaded approach and you'll <strong>succumb to the insurmountable pressure</strong>. It is important that each semester is balanced.</p>
+
+                <p>This tool allows you to take your pick from available courses and construct a schedule that does not only fit your needs, but <span title="Sometimes you need to complete course A before being able to take on course B. These rules are built into the system">respects the order</span> in which certain topics need to be processed. You may take longer or shorter than a <span title="Standard students are students who follow a model trajectory laid out by the academy itself">standard student</span> depending on your constructed curriculum, but at least you'll be happy.</p>
+
+                <p>Go ahead and get started!</p>
+
+                <p><a href="#" class="continue">Enter personal data</a></p>
+            </div>
+
+            <div class="overview-form hidden">
+                <h2 id="personal-data">Enter personal data</h2>
+                <p>In order to serve you correctly, we need to know some basic information first.</p>
+
+                <form id="form-data" autocomplete="on">
+                    <label for="name">name</label>
+                    <input type="text" id="name" na me="name" minlength="3" max="100" required>
+
+                    <label for="email">email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="ECTS">ECTS available for allocation</label>
+                     <input type="number" id="ECTS" name="ECTS available for allocation" min="3" max="60" value="3" required>
+
+                    <input id="submit" type="submit" value="Configure completed courses >">
+                </form>
+
+            </div>
+
+            <div class="overview-completed-courses hidden">
+                <h2 id="courses-completed">Select the courses you have already completed</h2>
+                <p>Selecting the courses that have already been completed will enable us to correctly fill out prerequisite knowledge for follow-up courses. If you haven't completed any courses yet, your selection will be limited to courses from the first and second semester.</p>
+
+                <nav aria-label="">
+                    <div class="semesters-container">
+                        <a href="#" class="enabled">S1</a>
+                        <a href="#">S2</a>
+                        <a href="#">S3</a>
+                        <a href="#">S4</a>
+                        <a href="#">S5</a>
+                        <a href="#">S6</a>
+                        <p>visible semesters</p>
+                    </div>
+
+                    <form class="filter">
+                        <select id="filter1" name="filter">
+                            <option value="none">no filter</option>
+                            <option value="ascending">ascending</option>
+                            <option value="descending">descending</option>
+                        </select>
+
+                        <label for="filter1">sort courses</label>
+                    </form>
+                </nav>
+
+                <div class="courses-container">
+                    <p>f</p>
+                </div>
+
+                <div class="continue-wrapper">
+                    <a href="#" class="return">Modify personal data</a>
+                    <a href="#" class="continue">Configure course curriculum</a>
+                </div>
+            </div>
+
+            <div class="overview-courses-to-complete hidden">
+                <h2 id="courses-curriculum">Configure course curriculum</h2>
+                <p>Select the courses you want to include in your curriculum next academic year.</p>
+
+                <nav aria-label="">
+                    <div class="semesters-container">
+                        <a href="#" class="enabled">S1</a>
+                        <a href="#">S2</a>
+                        <a href="#">S3</a>
+                        <a href="#">S4</a>
+                        <a href="#">S5</a>
+                        <a href="#">S6</a>
+                        <p>visible semesters</p>
+                    </div>
+
+                    <div class="error hidden"></div>
+
+                    <form class="filter">
+                        <select id="filter2" name="filter">
+                            <option value="none">no filter</option>
+                            <option value="ascending">ascending</option>
+                            <option value="descending">descending</option>
+                        </select>
+
+                        <label for="filter2">sort courses</label>
+                    </form>
+
+                </nav>
+
+                <div class="courses-container">
+
+                </div>
+
+                <div class="continue-wrapper">
+                    <a href="#" class="return">Modify completed courses</a>
+                    <a href="#" class="continue">Choice overview</a>
+                </div>
+            </div>
+
+            <div class="overview-choices hidden">
+                <h2 id="choice-overview">Choice overview</h2>
+                <p>Carefully study the table below and double check if the completed courses and desired courses check out. Once your application has been submitted, there is no turning back!</p>
+
+
+                <div class="ects-container">
+                    <div class="completed-ects">
+                        <h3>Completed ECTS</h3>
+                        <p class="ects-total ects-completed">60</p>
+                    </div>
+                    <div class="desired-ects">
+                        <h3>Desired ECTS</h3>
+                        <p class="ects-total ects-to-complete">34</p>
+                    </div>
+                </div>
+
+                <div class="tables-container">
+                    <table aria-label="completed-courses-label" id="table1">
+                        <thead>
+                            <tr>
+                                <th colspan="3">completed courses</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>semester</td>
+                                <td>course</td>
+                                <td># ECTS</td>
+                            </tr>
+
+                            <tr>
+                                <td>S1</td>
+                                <td>Computer Networks</td>
+                                <td>6ECTS</td>
+                            </tr>
+                            <tr>
+                                <td>S1</td>
+                                <td>Computer Networks</td>
+                                <td>6ECTS</td>
+                            </tr>
+
+                            <tr>
+                                <td> </td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="2">Total ECTS</td>
+                                <td>12ECTS</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table aria-label="desired-courses-label" id="table2">
+                        <thead>
+                            <tr>
+                                <th colspan="3">desired courses</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>semester</td>
+                                <td>course</td>
+                                <td># ECTS</td>
+                            </tr>
+
+                            <tr>
+                                <td>S3</td>
+                                <td>Secure Programming</td>
+                                <td>6ECTS</td>
+                            </tr>
+                            <tr>
+                                <td>S3</td>
+                                <td>Secure Programming</td>
+                                <td>6ECTS</td>
+                            </tr>
+
+                            <tr>
+                                <td>S3</td>
+                                <td>Web Technology</td>
+                                <td>3ECTS</td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="2">Total ECTS</td>
+                                <td>12ECTS</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="continue-wrapper">
+                    <a href="#" class="return">Modify desires courses</a>
+                    <a href="#" class="continue">Submit curriculum</a>
+                </div>
+            </div>
+
+            <div class="overview-thanks hidden">
+                <h2 id="thanks">Thank you for your submission!</h2>
+                <p>Thank you for submitting your curriculum. The course counsellor will be in touch shortly.</p>
+            </div>
+        </main>
+
+        <aside>
+            <h4>quickview</h4>
+
+            <p class="ects-total">0</p>
+            <span>ECTS</span>
+
+            <p><span class="ects-left">0</span> ECTS left</p>
+            <div class="progress-bar-container"><p class="progress"></p></div>
+            <p><span class="ects-allocated-percentage">0</span>% desired ects allocated</p>
+
+            <div class="course-in-semesters">
+
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <p>All images courtesy of font awesome and flaticon</p>
+    </footer>
+
+</body>
+</html>

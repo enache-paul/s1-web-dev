@@ -1,0 +1,515 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+@font-face {
+    font-family: "VagRounded";
+    src: url("../fonts/vagroundedstd-bold-webfont.woff");
+}
+
+/* Header styling */
+.header-container {
+    background-color: rgba(30, 35, 39, 0.9);
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 1% 2%;
+}
+
+.header-container h1 {
+    font-size: 2rem;
+    color: #44c8f5;
+}
+
+.header-container p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 2rem;
+}
+
+header img {
+    max-width: 100%;
+    min-width: 100%;
+    margin-bottom: 2%;
+}
+/* General elements */
+
+body {
+    font-family: OpenSans, sans-serif;
+    font-size: 1.1rem;
+}
+
+main {
+    width: 80%;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h1, h2, h3, h4, header div p, .continue, .semesters-container a, .completed-take-course {
+    font-family: VagRounded, sans-serif;
+}
+
+/* main >* */
+
+main > div {
+    padding-left: 3%;
+    margin-bottom: 2%;
+    margin-right: 3rem;
+}
+main > div h2 {
+    margin-bottom: 2%;
+    padding-left: 3rem;
+}
+
+main > div p, .filter label{
+    margin-bottom: 0.8rem;
+    line-height: 1.3rem;
+    color: #514d50;
+}
+
+main span {
+    background-color: #f5f2b6;
+    color: black;
+    font-weight: bold;
+}
+
+/* aside */
+
+aside {
+    color: white;
+    background: #44c8f5;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    margin-bottom: 3%;
+    text-align: center;
+    flex-basis: 14%;
+}
+
+aside  h4 {
+    color: white;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+aside .ects-total {
+    font-size: 2rem;
+    font-family: VagRounded, sans-serif;
+}
+
+aside p + span {
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+aside > p:nth-child(4) {
+    margin-bottom: 2%;
+}
+
+aside > .progress-bar-container {
+    background: #172531;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    height: 1.5rem;
+}
+
+aside .progress-bar-container .progress{
+    content: "\00a0";
+    height: 100%;
+    width: 0;
+    background-image: repeating-linear-gradient(
+            to left,
+            rgb(252,255,164),
+            rgb(255,250,205)
+    );
+}
+
+aside > p:nth-child(6) {
+    font-size: 0.7rem;
+    text-align: left;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 2%;
+}
+
+aside .course-in-semesters {
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+/* Specific elements */
+
+strong {
+    font-weight: bold;
+}
+main span:hover {
+    background-color: #44c8f5;
+    color: white;
+}
+
+.continue, .return {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+}
+
+.continue-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.overview-curriculum p a {
+    display: inline-block;
+}
+/* curriculum-quickview divs */
+
+
+.curriculum-quickview-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.continue, .continue a, .continue-wrapper > a, main div form input[type="submit"], .return{
+    text-decoration: none;
+    background-color: #44c8f5;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border-color: #44c8f5;
+    color: white;
+    font-family: VagRounded, sans-serif;
+}
+
+.courses-container {
+    padding: 1rem;
+}
+
+
+/* form styling */
+
+#form-data {
+
+}
+
+#form-data label {
+    display: block;
+}
+
+#form-data #name, #form-data #email {
+    width: 100%;
+}
+
+#form-data input[type="text"], #form-data input[type="email"], #form-data input[type="number"] {
+    color: #514d50;
+    background-color: #f8f4f4;
+    padding: 1.5%;
+    font-size: 1.5rem;
+    border: none;
+    margin-bottom: 0.5rem;
+    font-family: VagRounded, sans-serif;
+}
+
+#form-data input[type="submit"] {
+    margin-top: 2%;
+    display: block;
+    border: none;
+    cursor: pointer;
+}
+
+#form-data input:focus {
+    background: #a39e9e;
+    outline: none;
+    color: white;
+}
+
+#form-data label {
+    color: #514d50;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+/* Nav styling (Semesters & filters) */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter select {
+    display: block;
+}
+
+.semesters-container {
+    margin-top: 1%;
+}
+
+.semesters-container a {
+    color: #a39e9e;
+    background-color: #f8f4f4;
+    text-decoration: none;
+    padding: 0.35rem;
+
+}
+
+.semesters-container p {
+    margin-top: 1rem;
+}
+
+.semesters-container .enabled {
+    background-color: #60cf60;
+    color: white;
+}
+
+
+/* Courses styling */
+
+.courses-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem 2%;
+    margin-bottom: 2rem;
+
+}
+
+.course-container {
+    color: #514d50;
+    background: #f8f4f4;
+    padding: 1rem;
+    flex-grow: 0;
+    flex-shrink: 2;
+    flex-basis: 20%;
+    text-align: center;
+    border-radius: 0.8rem;
+}
+
+.course-container:nth-child(even) {
+    background: aliceblue;
+}
+
+.course-picture {
+    font-size: 3.5rem;
+    line-height: 200%;
+    margin-top: 2%;
+    height: 10rem;
+    margin-bottom: 1rem;
+}
+
+.course-container .lecturer {
+    margin-bottom: 2rem;
+}
+
+.course-container .ects {
+    display: inline;
+    border: 0.1rem dotted;
+    border-radius: 50%;
+    padding: 0.8rem;
+
+}
+
+.completed-take-course {
+    color: white;
+    background-color: #44c8f5;
+    display: block;
+    margin: 2rem auto auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-decoration: none;
+}
+
+.completed-take-course:hover {
+    background: #ec008c;
+    background-size: 2rem;
+}
+
+.selected, .selected:hover {
+    background: #ec008c url("../images/check-white.svg") no-repeat 1rem;
+    background-size: 2rem;
+}
+
+
+/* Tables */
+
+table {
+    color: #514d50;
+}
+
+.tables-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+.tables-container table {
+    flex-basis: 50%;
+}
+
+table thead th, table tbody tr td {
+    vertical-align: middle;
+}
+
+table thead th {
+    height: 3rem;
+}
+
+table tbody tr {
+    height: 2rem;
+}
+
+table tr {
+    text-align: center;
+}
+.tables-container th, .tables-container tbody tr:first-child, .tables-container tbody tr:last-child {
+    font-weight: bold;
+}
+
+table tbody tr:last-child td:first-child {
+    text-align: right;
+    margin-left: 2rem;
+}
+
+td:empty::after{  /* This is to prevent empty td to be collapsed */
+    content: "\00a0";
+}
+
+/* First table */
+
+table:first-child tbody tr:nth-child(even) {
+    background: #f0f8ff;
+}
+
+table:first-child tbody tr:nth-child(odd) {
+    background: rgba(173, 216, 230, 0.4);
+}
+
+table:first-child th, table:first-child tbody tr:first-child, table:first-child tbody tr:last-child {
+    background: rgba(173, 216, 230, 0.7);
+}
+
+/* Second table */
+
+table:last-child tbody tr:nth-child(odd) {
+    background: #f1ebfd;
+}
+
+table:last-child th, table:last-child tbody tr:first-child, table:last-child tbody tr:last-child {
+    background: #ec008c;
+    color: white;
+}
+
+/* ects desired & completed */
+
+.ects-container {
+    display: flex;
+    justify-content: space-between;
+    background: url("../images/arrow.svg") no-repeat center;
+    background-size: 15%;
+}
+
+.completed-ects, .desired-ects {
+    flex-basis: 50%;
+    text-align: center;
+}
+
+.ects-container .ects-total {
+    font-size: 3rem;
+    font-family: VagRounded, sans-serif;
+    margin-top: 1.25rem;
+    margin-bottom: 1.75rem;
+}
+
+.completed-ects .ects-total {
+    color: #44c8f5;
+}
+
+.desired-ects .ects-total {
+    color: #ec008c;
+}
+
+
+/* footer */
+
+footer {
+    color: white;
+    background: black;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* Hidden elements in overview */
+
+.hidden {
+    display: none;
+}
+
+/* IDs */
+
+#curriculum {
+    background: url("../images/curriculum.svg") no-repeat center left;
+    background-size: 1.8rem;
+}
+
+#personal-data {
+    background: url("../images/personal-data.svg") no-repeat center left;
+    background-size: 1.8rem;
+}
+
+#courses-completed {
+    background: url("../images/completed-courses.svg") no-repeat center left;
+    background-size: 2rem;
+}
+
+#courses-curriculum {
+    background: url("../images/new-courses.svg") no-repeat center left;
+    background-size: 2rem;
+}
+
+#choice-overview {
+    background: url("../images/overview.svg") no-repeat center left;
+    background-size: 2rem;
+}
+
+#thanks {
+    background: url("../images/thank-you.svg") no-repeat center left;
+    background-size: 2rem;
+
+}
+
+
+/* Color classes */
+
+.green {
+    background: linear-gradient(135deg, rgb(210, 255, 82) 0%, rgb(210, 255, 82) 24%, rgb(145, 232, 66) 100%);
+}
+
+.yellow {
+    background: linear-gradient(135deg, rgb(241, 231, 103) 0%, rgb(254, 182, 69) 100%);
+}
+
+.pink {
+    background: linear-gradient(135deg, rgb(250, 160, 236) 0%, rgb(242, 61, 148) 100%);
+}
+
+.orange {
+    background: linear-gradient(135deg, rgb(250, 245, 160) 0%, rgb(219, 85, 37) 100%);
+}
+
+.blue {
+    background: linear-gradient(135deg, rgb(160, 193, 250) 0%, rgb(40, 217, 240) 100%);
+}
+
+.purple {
+    background: linear-gradient(135deg, rgb(235, 233, 249) 0%, rgb(193, 191, 234) 100%);
+}
+
+.white {
+    background: linear-gradient(135deg, rgb(204, 249, 251) 0%, rgb(255, 255, 255) 100%);
+}
+
+.error {
+    background: darkred;
+    color: #f1ebfd;
+    font-weight: bold;
+    font-size: 2rem;
+    height: 25%;
+    padding: 1rem;
+}
+
