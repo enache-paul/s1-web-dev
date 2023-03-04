@@ -23,7 +23,7 @@ function changeState(e, className) {
 function checkError(e) {
     const courseName = e.target.parentElement.firstElementChild.innerText;
 
-    if ((courseName !== 'S1' && toCompleteCourses.length > 0) && (ectsLeft() - findByName(courseName).ects < 0)){
+    if ((courseName !== 'S1' && toCompleteCourses.length >= 0) && (ectsLeft() - findByName(courseName).ects < 0)){
         displayError('Not enough ECTS available to select');
         addOrRemoveFromList(e, toCompleteCourses);
         self.location.href = '#top';
